@@ -1,6 +1,6 @@
 * {
-  background: rgb(29, 30, 31);
-  color: aliceblue;
+  background: rgb(36, 38, 39);
+  color: rgb(192, 207, 219);
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -13,7 +13,6 @@
 
 .searchbar {
   border: none;
-  border-color: transparent;
   outline: none !important;
   margin-top: 20%;
   text-align: center;
