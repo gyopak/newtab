@@ -1,6 +1,6 @@
 * {
-  background: rgb(36, 38, 39);
-  color: rgb(192, 207, 219);
+  background: #242323;
+  color: #c0bdbd;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -15,7 +15,7 @@
   border: none;
   outline: none !important;
   margin-top: 20%;
+  width: 100%;
   text-align: center;
-  color: aliceblue;
-  font-size: 4rem;
+  font-size: 5rem;
 }
