@@ -1,7 +1,7 @@
 const search = document.querySelector('.searchbar');
 const date = document.querySelector('.date');
 const time = document.querySelector('.time')
-const preSearch = '$ ';
+const preSearch = '> ';
 const searchUrl = 'https://www.google.com.ph/search?q='
 
 const typeHandler = () => search.value = search.value.includes(preSearch) ? search.value : `${preSearch}`;
