@@ -2,6 +2,8 @@
   background: #242323;
   color: #c0bdbd;
   font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 .container {
@@ -15,12 +17,24 @@
 .searchbar {
   border: none;
   outline: none !important;
-  margin-top: -10%;
+  margin-top: -5%;
   width: 100%;
   text-align: center;
   font-size: 5rem;
 }
 
 .time {
-    font-size: 3.5rem;
+    font-size: 4rem;
+}
+
+.date {
+    display: inline;
+    font-size: 2.5rem;
+}
+
+.settings {
+    position: absolute;
+    font-size: 3rem;
+    bottom: 0;
+    left: 0;
 }
