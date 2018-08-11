@@ -24,17 +24,17 @@
 }
 
 .time {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 .date {
-    display: inline;
-    font-size: 2.5rem;
+  display: inline;
+  font-size: 2.5rem;
 }
 
 .settings {
-    position: absolute;
-    font-size: 3rem;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  font-size: 3rem;
+  bottom: 0;
+  left: 0;
 }
