@@ -1,6 +1,8 @@
 const search = document.querySelector('.searchbar');
 const date = document.querySelector('.date');
-const time = document.querySelector('.time')
+const time = document.querySelector('.time');
+const settingsIcon = document.querySelector('.settings-icon');
+const settingsPanel = document.querySelector('.settings');
 const preSearch = '> ';
 const searchUrl = 'https://www.google.com.ph/search?q='
 
@@ -24,7 +26,16 @@ const dateTimeInit = () => {
   time.innerText = `${now.getHours()}:${now.getMinutes()}`
 };
 
+const settingsIconInit = () => {
+  settingsIcon.addEventListener('click', () => {
+    settingsPanel.classList.toggle('visible');
+    settingsIcon.classList.toggle('visible');
+    searchInit();
+  })
+}
+
 (() => {
   searchInit();
   dateTimeInit();
+  settingsIconInit();
 })()

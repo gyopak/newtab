@@ -1,12 +1,12 @@
 * {
-  background: #242323;
-  color: #c0bdbd;
   font-family: 'Montserrat', sans-serif;
   padding: 0;
   margin: 0;
 }
 
 .container {
+  background: #242323;
+  color: #c0bdbd;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -15,6 +15,8 @@
 }
 
 .searchbar {
+  background: #242323;
+  color: #c0bdbd;
   border: none;
   outline: none !important;
   margin-top: -5%;
@@ -35,8 +37,61 @@
 }
 
 .settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 800ms, visibility 800ms background-color 800ms;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #c0bdbd;
+  color: #242323;
+}
+
+.visible {
+  color: #242323;
+  visibility: visible;
+  opacity: 1;
+}
+
+.settings-icon {
   position: absolute;
   font-size: 2.5rem;
   bottom: 0;
   left: 0;
+  display: block;
+}
+
+.key, .value {
+  background: #242323;
+  color: #c0bdbd;
+  border: none;
+  outline: none !important;
+  margin-top: 20px;
+  font-size: 2rem;
+}
+
+.key {
+    text-align: center;
+    margin-right: 20px;
+  }
+
+.value {
+  width: 60%;
+}
+
+.quicklink {
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.tagname {
+    font-size: 3rem;
 }
