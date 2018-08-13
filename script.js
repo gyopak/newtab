@@ -22,11 +22,13 @@ const searchInit = () => {
 
 const dateTimeInit = () => {
   const now = new Date();
+  const hours = now.getHours() > 10 ? now.getHours() : '0' + now.getHours();
+  const minutes = now.getMinutes() > 10 ? now.getMinutes() : '0' + now.getMinutes();
   date.innerText = now.toJSON().slice(0,10);
-  time.innerText = `${now.getHours()}:${now.getMinutes()}`
+  time.innerText = `${hours} : ${minutes}`
 };
 
-const settingsIconInit = () => {
+const settingsInit = () => {
   settingsIcon.addEventListener('click', () => {
     settingsPanel.classList.toggle('visible');
     settingsIcon.classList.toggle('visible');
@@ -37,5 +39,5 @@ const settingsIconInit = () => {
 (() => {
   searchInit();
   dateTimeInit();
-  settingsIconInit();
+  settingsInit();
 })()
