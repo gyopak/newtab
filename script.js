@@ -63,7 +63,7 @@ const storageInit = (forced=false) => {
   }
 }
 
-const updateQuickLinks = () => {
+const updateQuickLinkDom = () => {
   while(settingsPanel.firstChild){
       settingsPanel.removeChild(settingsPanel.firstChild)
   }
@@ -91,5 +91,5 @@ const updateQuickLinks = () => {
   dateTimeInit();
   settingsInit();
   storageInit();
-  updateQuickLinks();
+  updateQuickLinkDom();
 })()
