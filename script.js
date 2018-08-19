@@ -12,7 +12,7 @@ const getLink = (key) => db()[key];
 const setLink = (key, value) => {
   links[key] = value;
   localStorage.setItem('links', JSON.stringify(links));
-  updateQuickLinks();
+  updateQuickLinkDom();
 }
 
 const typeHandler = () => search.value = search.value.includes(preSearch) ? search.value : `${preSearch}`;
@@ -20,11 +20,9 @@ const typeHandler = () => search.value = search.value.includes(preSearch) ? sear
 const searchHandler = () => {
   let rawSearchValue = search.value.split(preSearch)[1];
   const searchUrl = getLink(rawSearchValue.split(' ')[0])
-  if (searchUrl) {
+  if (true) {
     rawSearchValue = rawSearchValue.replace(rawSearchValue.split(' ')[0], '').trim();
     window.location.replace(`${searchUrl + rawSearchValue.replace(' ', '+')}`);
-  } else {
-    window.location.replace(`${getLink('go') + rawSearchValue}`);
   }
 };
 
@@ -51,15 +49,15 @@ const settingsInit = () => {
   })
 }
 
-const storageInit = (forced=false) => {
+const storageInit = (forced=true) => {
   const links = JSON.parse(localStorage.getItem('links'));
   if (!links || forced) {
     localStorage.clear();
     localStorage.setItem('links', {});
-    setLink('go', 'https://www.google.com.ph/search?q=');
+    setLink('go', 'https://www.google.com/search?q=');
     setLink('gh', 'https://github.com/search?q=');
     setLink('yt', 'https://www.youtube.com/results?search_query=');
-    setLink('mdn', 'https://developer.mozilla.org/hu/search?q=');
+    setLink('mdn', 'https://developer.mozilla.org/en/search?q=');
   }
 }
 
