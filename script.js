@@ -22,7 +22,7 @@ const searchHandler = () => {
   const searchUrl = getLink(rawSearchValue.split(' ')[0])
   if (true) {
     rawSearchValue = rawSearchValue.replace(rawSearchValue.split(' ')[0], '').trim();
-    window.location.replace(`${searchUrl + rawSearchValue.replace(' ', '+')}`);
+    window.location.replace(`${searchUrl + rawSearchValue.replace(/ /g, '+')}`);
   }
 };
 
