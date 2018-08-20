@@ -1,5 +1,4 @@
 # newtab
-forked from [gy0p4k/newtab](https://github.com/gy0p4k/newtab)
 
 type after ```> option keyword```
 
