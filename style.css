@@ -1,5 +1,5 @@
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "PingFang SC";
   padding: 0;
   margin: 0;
 }
@@ -29,11 +29,19 @@
 
 .time {
   font-size: 4rem;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .date {
   display: inline;
   font-size: 2.5rem;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .settings {
@@ -78,20 +86,21 @@
 }
 
 .key {
-    text-align: center;
-    margin-right: 20px;
-  }
+  text-align: center;
+  margin-right: 20px;
+}
 
 .value {
-  width: 60%;
+  margin-right: 20px;
 }
 
 .quicklink {
-    display: flex;
-    justify-content: center;
-    width: 100%
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vh;
 }
 
 .tagname {
-    font-size: 3rem;
+  font-size: 3rem;
 }

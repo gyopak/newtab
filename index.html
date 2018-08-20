@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>New Tab</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>New Tab</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
 </head>
+
 <body class="container">
-    <h1 class="time"></h1>
-    <input type="text" class="searchbar">
-    <div class="footer">
-        <h2 class="date"></h2>
+  <h1 class="time"></h1>
+  <input type="text" class="searchbar">
+  <div class="footer">
+    <h2 class="date"></h2>
+  </div>
+  <div class="settings">
+    <p class="tagname">quick links</p>
+    <div class="quicklink">
+      <input type="text" class="key" value="go">
+      <input type="text" class="value" value="https://www.google.com/search?q=">
+      <input type="text" class="key" value="gt">
+      <input type="text" class="value" value="https://github.com/search?q=">
+      <input type="text" class="key" value="yt">
+      <input type="text" class="value" value="https://www.youtube.com/results?search_query=">
+      <input type="text" class="key" value="mdn">
+      <input type="text" class="value" value="https://developer.mozilla.org/en/search?q=">
     </div>
-    <div class="settings">
-        <p class="tagname">quick links</p>
-        <div class="quicklink">
-            <input type="text" class="key" value="reddit">
-            <input type="text" class="value" value="https://reddit.com/">
-        </div>
-    </div>
-    <span class="settings-icon"><i class="fas fa-bars"></i></span>
-    <script src="script.js"></script>
+  </div>
+  <span class="settings-icon"><i class="fas fa-bars"></i></span>
+  <script src="script.js"></script>
 </body>
+
 </html>
