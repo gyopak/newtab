@@ -33,13 +33,26 @@ const searchInit = () => {
   search.addEventListener('change', searchHandler);
 };
 
-const dateTimeInit = () => {
-  const now = new Date();
-  const hours = now.getHours() > 9 ? now.getHours() : '0' + now.getHours();
-  const minutes = now.getMinutes() > 9 ? now.getMinutes() : '0' + now.getMinutes();
-  date.innerText = now.toJSON().slice(0,10);
-  time.innerText = `${hours} : ${minutes}`
-};
+function checkTime(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+
+function startTime() {
+  var today = new Date();
+  date.innerText = today.toJSON().slice(0,10);
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  time.innerHTML = h + ":" + m + ":" + s;
+  t = setTimeout(function() {
+    startTime()
+  }, 500);
+}
 
 const settingsInit = () => {
   settingsIcon.addEventListener('click', () => {
@@ -58,6 +71,7 @@ const storageInit = (forced=true) => {
     setLink('gh', 'https://github.com/search?q=');
     setLink('yt', 'https://www.youtube.com/results?search_query=');
     setLink('mdn', 'https://developer.mozilla.org/en/search?q=');
+    setLink('bd', 'https://www.baidu.com/s?wd=');
   }
 }
 
@@ -86,7 +100,7 @@ const updateQuickLinkDom = () => {
 
 (() => {
   searchInit();
-  dateTimeInit();
+  startTime();
   settingsInit();
   storageInit();
   updateQuickLinkDom();
