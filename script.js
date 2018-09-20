@@ -58,6 +58,7 @@ const storageInit = (forced=true) => {
     setLink('gh', 'https://github.com/search?q=');
     setLink('yt', 'https://www.youtube.com/results?search_query=');
     setLink('mdn', 'https://developer.mozilla.org/en/search?q=');
+    setLink('bd', 'https://www.baidu.com/s?wd=');
   }
 }
 
