@@ -1,6 +1,6 @@
 const search = document.querySelector('.searchbar');
 const date = document.querySelector('.date');
-const time = document.querySelector('#time');
+const time = document.querySelector('.time');
 const settingsIcon = document.querySelector('.settings-icon');
 const settingsPanel = document.querySelector('.settings');
 const preSearch = '> ';
@@ -33,14 +33,6 @@ const searchInit = () => {
   search.addEventListener('change', searchHandler);
 };
 
-const dateTimeInit = () => {
-  const now = new Date();
-  // const hours = now.getHours() > 9 ? now.getHours() : '0' + now.getHours();
-  // const minutes = now.getMinutes() > 9 ? now.getMinutes() : '0' + now.getMinutes();
-  date.innerText = now.toJSON().slice(0,10);
-  // time.innerText = `${hours} : ${minutes}`
-};
-
 function checkTime(i) {
   if (i < 10) {
     i = "0" + i;
@@ -50,13 +42,13 @@ function checkTime(i) {
 
 function startTime() {
   var today = new Date();
+  date.innerText = today.toJSON().slice(0,10);
   var h = today.getHours();
   var m = today.getMinutes();
   var s = today.getSeconds();
-  // add a zero in front of numbers<10
   m = checkTime(m);
   s = checkTime(s);
-  document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+  time.innerHTML = h + ":" + m + ":" + s;
   t = setTimeout(function() {
     startTime()
   }, 500);
@@ -108,7 +100,6 @@ const updateQuickLinkDom = () => {
 
 (() => {
   searchInit();
-  dateTimeInit();
   startTime();
   settingsInit();
   storageInit();
