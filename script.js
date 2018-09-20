@@ -33,13 +33,34 @@ const searchInit = () => {
   search.addEventListener('change', searchHandler);
 };
 
-const dateTimeInit = () => {
-  const now = new Date();
-  const hours = now.getHours() > 9 ? now.getHours() : '0' + now.getHours();
-  const minutes = now.getMinutes() > 9 ? now.getMinutes() : '0' + now.getMinutes();
-  date.innerText = now.toJSON().slice(0,10);
-  time.innerText = `${hours} : ${minutes}`
-};
+// const dateTimeInit = () => {
+//   const now = new Date();
+//   const hours = now.getHours() > 9 ? now.getHours() : '0' + now.getHours();
+//   const minutes = now.getMinutes() > 9 ? now.getMinutes() : '0' + now.getMinutes();
+//   date.innerText = now.toJSON().slice(0,10);
+//   time.innerText = `${hours} : ${minutes}`
+// };
+
+function checkTime(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  // add a zero in front of numbers<10
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+  t = setTimeout(function() {
+    startTime()
+  }, 500);
+}
 
 const settingsInit = () => {
   settingsIcon.addEventListener('click', () => {
@@ -87,7 +108,8 @@ const updateQuickLinkDom = () => {
 
 (() => {
   searchInit();
-  dateTimeInit();
+  // dateTimeInit();
+  startTime();
   settingsInit();
   storageInit();
   updateQuickLinkDom();

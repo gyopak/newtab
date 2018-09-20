@@ -27,7 +27,7 @@
   font-weight: bold;
 }
 
-.time {
+#time {
   font-size: 4rem;
   -webkit-user-select: none;
   -moz-user-select: -moz-none;
